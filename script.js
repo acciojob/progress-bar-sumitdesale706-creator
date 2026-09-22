@@ -29,7 +29,7 @@ previous.addEventListener("click", () => {
 
 	    if(currC <= 1){
 			 previous.disabled = true;
-			 currC == 1;
+			 currC = 1;
 		}
 });
 
