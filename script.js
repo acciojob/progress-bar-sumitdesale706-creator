@@ -10,7 +10,7 @@ let previous = document.querySelector("#prev");
 previous.disabled = true;
 
 next.addEventListener("click", () => {
-	  currC = currC + 1;
+	  currC++;
 	  previous.disabled = false;
 	
 		 for(let i = 0; i < 5; i++){
@@ -30,7 +30,7 @@ next.addEventListener("click", () => {
 
 previous.addEventListener("click", () => {
 	     circles[currC - 1].classList.remove("active");
-	     currC = currC - 1;
+	     currC--;
 
 	     if(currC == 1){
 			   next.disabled = false;
