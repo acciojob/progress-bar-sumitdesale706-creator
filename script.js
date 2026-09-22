@@ -13,11 +13,9 @@ next.addEventListener("click", () => {
 	  currC++;
 	  previous.disabled = false;
 	
-		 for(let i = 0; i < 5; i++){
+		 for(let i = 1; i < 5; i++){
 		    if(i + 1 <= currC){
 				 circles[i].classList.add("active");
-			}else{
-				 circles[i].classList.remove("active");
 			}
 
 			if(currC == 5){
