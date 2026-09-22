@@ -1,6 +1,4 @@
 //your JS code here. If required.
-let heading = document.querySelector("h1");
-heading.innerText = "1";
 var currC = 1;
 
 let progressBar = document.querySelector(".bar");
@@ -13,7 +11,6 @@ previous.disabled = true;
 
 next.addEventListener("click", () => {
 	  currC++;
-	  heading.innerText = `${currC}`;
 	
 	  previous.disabled = false;
 		 if(currC <= 5){
@@ -26,17 +23,13 @@ next.addEventListener("click", () => {
 });
 
 previous.addEventListener("click", () => {
-	     next.disabled = false;
-
+	    next.disabled = false;
 	    currC--;
-        heading.innerText = `${currC}`;
-	
 		circles[currC].classList.remove("active");
 
 	    if(currC <= 1){
 			 previous.disabled = true;
 			 currC == 1;
-			 heading.innerText = `${currC}`;
 		}
 });
 
