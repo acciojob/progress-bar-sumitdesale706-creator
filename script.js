@@ -1,36 +1,35 @@
-//your JS code here. If required.
-var currC = 1;
+let currC = 1;
 
-let progressBar = document.querySelector(".bar");
 let circles = document.querySelectorAll(".circle");
-
 let next = document.querySelector("#next");
 let previous = document.querySelector("#prev");
 
 previous.disabled = true;
 
 next.addEventListener("click", () => {
-	  currC++;
-	
-	  previous.disabled = false;
-		 if(currC <= 5){
-			  circles[currC-1].classList.add("active");
-		 }
+    circles[currC - 1].classList.remove("active");
 
-		 if (currC == 5){ 
-				next.disabled = true; 
-		 }
+    currC++;
+
+    circles[currC - 1].classList.add("active");
+
+    previous.disabled = false;
+
+    if (currC === 5) {
+        next.disabled = true;
+    }
 });
 
 previous.addEventListener("click", () => {
-	    next.disabled = false;
-	    currC--;
-		circles[currC].classList.remove("active");
+    circles[currC - 1].classList.remove("active");
 
-	    if(currC <= 1){
-			 previous.disabled = true;
-			 currC = 1;
-		}
+    currC--;
+
+    circles[currC - 1].classList.add("active");
+
+    next.disabled = false;
+
+    if (currC === 1) {
+        previous.disabled = true;
+    }
 });
-
-
