@@ -12,27 +12,24 @@ previous.disabled = true;
 next.addEventListener("click", () => {
 	  currC++;
 	  previous.disabled = false;
-	
-		 for(let i = 1; i < 5; i++){
-		    if(i + 1 <= currC){
-				 circles[i].classList.add("active");
-			}
+		 if(currC <= 5){
+			  circles[currC-1].classList.add("active");
+		 }
 
-			if(currC == 5){
-				 currC == 1;
-		         next.disabled = true;
-		         previous.disabled = false;
-			}
+		 if (currC == 5){ 
+				next.disabled = true; 
 		 }
 });
 
 previous.addEventListener("click", () => {
-	     circles[currC - 1].classList.remove("active");
+	     next.disabled = false;
+	
+	     circles[currC-1].classList.remove("active");
 	     currC--;
 
 	     if(currC == 1){
-			   next.disabled = false;
 		       previous.disabled = true;
 		 }
 });
+
 
