@@ -1,5 +1,5 @@
 //your JS code here. If required.
-var currC = 0;
+var currC = 1;
 
 let progressBar = document.querySelector(".bar");
 let circles = document.querySelectorAll(".circle");
@@ -10,8 +10,9 @@ let previous = document.querySelector("#prev");
 previous.disabled = true;
 
 next.addEventListener("click", () => {
+	  currC = currC + 1;
 	  previous.disabled = false;
-	  currC = currC + 1;;
+	
 		 for(let i = 0; i < 5; i++){
 		    if(i + 1 <= currC){
 				 circles[i].classList.add("active");
@@ -31,7 +32,7 @@ previous.addEventListener("click", () => {
 	     circles[currC - 1].classList.remove("active");
 	     currC = currC - 1;
 
-	     if(currC == 0){
+	     if(currC == 1){
 			   next.disabled = false;
 		       previous.disabled = true;
 		 }
