@@ -21,7 +21,7 @@ next.addEventListener("click", () => {
 			}
 
 			if(currC == 5){
-				 currC == 0;
+				 currC == 1;
 		         next.disabled = true;
 		         previous.disabled = false;
 			}
